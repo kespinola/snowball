@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Snowball Project!</title>
+	 
+        <script type="text/javascript" src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.easyWizard.js"></script>
+	    <script src="lib/bootstrap.min.js"></script>
+        <script src="lib/bootstrap-tagmanager.js"></script>
+        <script src="lib/prettify.js"></script>
+
+		
+        
+	    <link rel="stylesheet" href="css/textextjs-main.css" type="text/css" />
+	    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+	  	<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+	    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+	    <link href="css/font-awesome-ie7.min.css" type="text/css" rel="stylesheet" />
+	    <link href="css/popup.css" type="text/css" rel="stylesheet" />
+	    <link href="css/flat-ui.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="lib/bootstrap.min.js"></script>	
+	    <script type='text/javascript' src="lib/jquery.tabify-1.4.source.js"></script>
+ 
+</head>
+<body>
+	<header>
+		<p align="center" class="loginface"></p>
+	</header>
+	 
+
+<ul id="menu">
+    <li class="active"><a href="#contentHome">Share!</a></li>
+    <li><a href="#contentPlaylist">My Playlist</a></li>
+    <li><a href="#contentUplayer">Universal Player</a></li>
+</ul>
+
+<div class="content" id="contentHome">
+
+<section id="nowPlaying">
+		<p class="album"></p>
+		<p class="artist"></p>
+		<p class="track"></p>
+		<p class="url"></p>
+	</section>
+
+	
+<form id="myWizard" type="get" action="" class="form-horizontal">
+
+    <section class="step" data-step-title="Step 1">
+        <div class="control-group">
+            <label class="control-label" for="input_name">Name</label>
+            <div class="controls">
+                <input type="text" id="input_name" value="" class="input-xlarge" title="Name is required !" required />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input_artist">Artist</label>
+            <div class="controls">
+                <input type="text" id="input_artist" value="" class="input-xlarge" title="Artist is required !" required />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input_url">Url</label>
+            <div class="controls">
+                <input type="text" id="input_url" value="" class="input-xlarge" title="Url is required !" required />
+            </div>
+        </div> 
+	</section>
+
+	<section class="step" data-step-title="Step 2">
+		<div class="control-group">
+			<label class="control-label" for="input_tags"><strong>Tags</strong></label>
+			<div class="controls">
+		    <input type="text" autocomplete="off" data-items="6" data-provide="typeahead" name="tags" placeholder="Tags" id="input_tags" style="width:9em;" class="input-medium tagManager" data-original-title=""/>
+            <input type="hidden" value="test1,test2" name="hiddenTagList">
+			</div>
+
+		</div>
+		
+		<div class="control-group">
+            <div id="tags-bubbles">
+            </div>
+		</div> 
+		<div class="control-group">
+			<label class="control-label" for="input_friends">Friends</label>
+			<div class="controls">                
+				<input type="text" autocomplete="off" data-items="6" data-provide="typeahead" name="tags" placeholder="Tags" id="input_friends" style="width:9em;" class="input-medium tagManager" data-original-title=""/>
+			</div>
+		</div>	
+		<p align="center">Friends do not appear? Please click again on extension Icon!</p>
+	</section>
+	<section class="step" data-step-title="Step 3">
+		<div class="control-group">
+			<div class="controls">
+                <input type="submit" id="input_submit" class="btn btn-info submit" />
+			</div>
+		</div>
+	</section></form>
+</div>
+
+
+<div class="content" id="contentPlaylist">
+
+<div class="container" id="main">
+		
+				<div class="player">
+				  <div class="song-title">Playing</div> 
+					<div id="player">
+					
+					</div>
+				</div>
+				
+			    <div class="list">
+				   <table class="favourite-list table-list" data-name="Favourites">
+					 <tbody>
+						
+					 </tbody>
+				   </table>
+				
+				  <ul class="realtime-list">
+				  </ul>
+			    </div> 
+			
+			    <div class="interface">
+				 <div class="left-navigation">	
+					<div class="previous-button button"><span class="icon-backward"></span></div>
+					<div class="play-button button"><span class="icon-play active"></span><span class="icon-pause"></span></div>
+					<div class="next-button button"><span class="icon-forward"></span></div>
+				 </div>
+			    </div>
+</div>
+
+
+</div>
+
+
+<div class="content" id="contentUplayer">
+ 
+ 
+ <div class="container">
+		<div id='dvControl'>
+			<!--SongTitle-->
+			<div class="row-fluid">
+				<div class="span12">
+					<div id="songTitle"class="well"></div>
+				</div>
+			</div>
+			<!--Toolbar-->
+			<div class="row-fluid">
+				<div class="span12">
+					<ul class="pager">
+					  	<li>
+					    	<a href="#" title="Play previous" id="btnPrev"><i class="icon icon-backward"></i></a>
+					  	</li>
+					  	<li>
+					    	<a href="#" title="Play" id="btnPlayStop"><i class="icon icon-play"></i></a>
+					 	</li>
+					  	<li>
+					    	<a href="#" title="Play next" id="btnNext"><i class="icon icon-forward"></i></a>
+					 	</li>
+					  	<li>
+					    	<a href="#"  title="Volumn" id="btnVolumn"><i class="icon icon-volume-up"></i></a>
+					 	</li>
+					 	<li>
+					 		<input type="range" id="brVolumn" value="0" min="0" max="1" step='0.01' style="width:75px; vertical-align: middle;" />
+					 	</li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="tabtable" style="border-color:#1381CC;">
+			<div style="width:496px; height:350px; height: 344px;overflow: auto; border:1px solid #1381CC;">
+				<div id="playlistContainer">
+					<table>
+						<tbody>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+		</div>
+	</div>
+ 
+ 
+ 
+ 
+ 
+<!--<div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 15px auto; max-width: 736px;">
+<iframe scrolling="no" src="http://cloud.m80.us/" style="border: 0px none; margin-left: -5px; height: 89px; margin-top: 133px; width: 926px;">
+</iframe>
+</div>-->
+</div>
+  
+<script src="js/popup.js"></script> 
+</body>
+</html>

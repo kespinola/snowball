@@ -1,0 +1,80 @@
+{
+	"manifest_version": 2,
+	"background": {
+		"page": "background.html"
+	},
+	"browser_action": {
+		"default_icon": "img/icons/snowball16.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*.bandcamp.com/*",
+				"http://play.google.com/music/*",
+				"https://play.google.com/music/*",
+				"http://*.indieshuffle.com/*",
+				"https://*.indieshuffle.com/*",
+				"http://*.napster.de/*",
+				"http://*.pandora.com/*",
+				"https://*.pandora.com/*",
+				"http://*.player.fm/*",
+				"http://*.rhapsody.com/*",
+				"http://*.deezer.com/*",
+				"http://*.rdio.com/*",
+				"http://*.spotify.com/*",
+				"http://*.youtube.com/*",
+				"http://*.tunein.com/*",
+				"http://*.songza.com/*",
+				"http://*.soundcloud.com/*",
+				"https://*.soundcloud.com/*",
+				"http://*.turntable.fm/*",
+				"https://*.turntable.fm/*",
+				"http://*.twonky.com/*",
+				"http://*.m80.us/*",
+				"https://graph.facebook.com/*"
+			],
+			"js": [
+				"lib/jquery-1.8.0.min.js",
+				"js/injection.js"
+			]
+		},
+		{
+			"matches": [
+				"http://*.jango.com/*",
+				"http://*.we7.com/*"
+			],
+			"js": [
+				"lib/jquery-1.8.0.min.js",
+				"js/injection.js"
+			],
+			"all_frames": true
+		}
+	],
+	"description": "Snowball Music Listen.",
+	"icons": {
+		"16": "img/snowball16.png",
+		"24": "img/snowball24.png",
+		"48": "img/snowball48.png",
+		"64": "img/snowball64.png",
+		"128": "img/snowball128.png"
+	},
+	"name": "Snowball Music",
+	"permissions": [
+		"notifications",
+		"tabs",
+		"http://ws.audioscrobbler.com/2.0/",
+		"*://m80.us/*",
+		"http://*/*",
+		"https://*/*",
+		"*://*/*",
+		"https://graph.facebook.com/*"
+
+		
+	],
+	"web_accessible_resources": [
+		"img/snowball64.png"
+	],
+	"version": "0.7.8",
+	"content_security_policy": "script-src 'self' https://youtube.com; font-src 'self' https://themes.googleusercontent.com; object-src 'self'"
+}
