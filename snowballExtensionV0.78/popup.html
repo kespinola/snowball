@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<title>Snowball Project!</title>
+	<title>Snowball | Free Music Sharing App</title>
 	 
         <script type="text/javascript" src="lib/jquery.min.js"></script>
         <script src="lib/jquery.easyWizard.js"></script>
@@ -21,59 +21,60 @@
 	    <link href="css/flat-ui.css" type="text/css" rel="stylesheet" />
         <script type="text/javascript" src="lib/bootstrap.min.js"></script>	
 	    <script type='text/javascript' src="lib/jquery.tabify-1.4.source.js"></script>
+	   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
  
 </head>
 <body>
 	<header>
-		<p align="center" class="loginface"></p>
+	<div class="header-btn"><a href=#"contentHome"><i class="icon-download"></i></a></div>
+	<p align="center" class="loginface"></p>
+	<div style="display:none">
+	<ul id="menu" class="nav-bar">
+	<div class="btn-group">
+	    <li class="active"><a href="#contentHome"><i class="fui-new btn"></i></a></li>
+	    <li><a href="#contentPlaylist"><i class="fui-list btn"></i></a></li>
+	    <li><a href="#contentUplayer"><i class="fui-play btn"></i></a></li>
+	</div>
+	</ul>
+	</div>
 	</header>
 	 
 
-<ul id="menu">
-    <li class="active"><a href="#contentHome">Share!</a></li>
-    <li><a href="#contentPlaylist">My Playlist</a></li>
-    <li><a href="#contentUplayer">Universal Player</a></li>
-</ul>
 
 <div class="content" id="contentHome">
 
+
+
 <section id="nowPlaying">
 		<p class="album"></p>
-		<p class="artist"></p>
-		<p class="track"></p>
-		<p class="url"></p>
+		<p class="artist" style="display:none"></p>
+		<p class="track" style="display:none"></p>
 	</section>
 
 	
 <form id="myWizard" type="get" action="" class="form-horizontal">
 
-    <section class="step" data-step-title="Step 1">
+    <section class="step login-form" data-step-title="Step 1">
         <div class="control-group">
-            <label class="control-label" for="input_name">Name</label>
             <div class="controls">
-                <input type="text" id="input_name" value="" class="input-xlarge" title="Name is required !" required />
+                <input type="text" id="input_name" value="" class="login-field" placeholder="Song Title" title="Name is required !" required />
+                <label class="login-field-icon icon-music" for="input_name"></label>
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="input_artist">Artist</label>
             <div class="controls">
-                <input type="text" id="input_artist" value="" class="input-xlarge" title="Artist is required !" required />
+                <input type="text" id="input_artist" value="" placeholder="Artist" class="login-field" title="Artist is required !" required />
+                <label class="login-field-icon icon-headphones" for="input_artist"></label>
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="input_url">Url</label>
-            <div class="controls">
-                <input type="text" id="input_url" value="" class="input-xlarge" title="Url is required !" required />
-            </div>
-        </div> 
 	</section>
 
-	<section class="step" data-step-title="Step 2">
+	<section class="step top-space login-form" data-step-title="Step 2">
 		<div class="control-group">
-			<label class="control-label" for="input_tags"><strong>Tags</strong></label>
 			<div class="controls">
-		    <input type="text" autocomplete="off" data-items="6" data-provide="typeahead" name="tags" placeholder="Tags" id="input_tags" style="width:9em;" class="input-medium tagManager" data-original-title=""/>
-            <input type="hidden" value="test1,test2" name="hiddenTagList">
+		    <input type="text" autocomplete="off" data-items="6" data-provide="typeahead" name="tags" placeholder="Tags" id="input_tags"  class="input-medium tagManager" data-original-title=""/>
+		    
+            <input type="hidden" value="" name="hiddenTagList">
 			</div>
 
 		</div>
@@ -83,12 +84,10 @@
             </div>
 		</div> 
 		<div class="control-group">
-			<label class="control-label" for="input_friends">Friends</label>
 			<div class="controls">                
-				<input type="text" autocomplete="off" data-items="6" data-provide="typeahead" name="tags" placeholder="Tags" id="input_friends" style="width:9em;" class="input-medium tagManager" data-original-title=""/>
+				<input type="text" autocomplete="off" data-items="6" data-provide="typeahead" name="tags" placeholder="Friends" id="input_friends" class="input-medium tagManager" data-original-title=""/>
 			</div>
 		</div>	
-		<p align="center">Friends do not appear? Please click again on extension Icon!</p>
 	</section>
 	<section class="step" data-step-title="Step 3">
 		<div class="control-group">
@@ -191,8 +190,11 @@
 <iframe scrolling="no" src="http://cloud.m80.us/" style="border: 0px none; margin-left: -5px; height: 89px; margin-top: 133px; width: 926px;">
 </iframe>
 </div>-->
+
 </div>
-  
+
+<div class="full-width-btn" id="playlist-btn" ><a href="#contentPlaylist"><i class="fui-list"></i></a></div>
+
 <script src="js/popup.js"></script> 
 </body>
 </html>

@@ -196,7 +196,7 @@ function update_now_playing (data) {
 	if (hostEnabled && data.name.length && data.artist.length) {
 		notify({
 			message: data.artist + ' - ' + data.name,
-			title: 'Snowball Playing :)'
+			title: 'Ready to Share:'
 		});
 		if (lf_session) {
 			params = {

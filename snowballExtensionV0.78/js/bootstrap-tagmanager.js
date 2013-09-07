@@ -52,7 +52,7 @@
       hiddenTagListId: null,
       deleteTagsOnBackspace: true,
       tagsContainer: null,
-      tagCloseIcon: '<i class="icon-remove-circle"></i>',
+      tagCloseIcon: 'x',
       tagClass: '',
       validator: null
     };

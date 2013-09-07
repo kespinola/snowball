@@ -545,12 +545,16 @@ h6 {
   background-color: #420604;
 }
 .btn.btn-info {
-  background-color: #D8D2D3;
+  background-color: #c0392b;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
 }
 .btn.btn-info:hover,
 .btn.btn-info:focus,
 .btn-group:focus .btn.btn-info.dropdown-toggle {
-  background-color: #c6bebf;
+  background-color: #e74c3c;
+
 }
 .btn.btn-info:active,
 .btn-group.open .btn.btn-info.dropdown-toggle,
@@ -1061,6 +1065,8 @@ h6 {
   border-radius: 3px;
   color: #ffffff;
   padding: 6px 8px 8px;
+  background-color: #f9f9f9;
+  border: 2px solid #95a5a6;
 }
 .navbar .nav li.dropdown .dropdown-menu .divider {
   background-color: #2c3e50;
@@ -1205,11 +1211,12 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   border: 2px solid #D8D2D3;
-  color: #34495e;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
+  color: #D8D2D3;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 100;
+	font-size: 18px;
   padding: 8px 5px;
-  height: 21px;
+  height: 35px;
   text-indent: 6px;
   -webkit-appearance: none;
   -webkit-border-radius: 6px;
@@ -1310,10 +1317,11 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: #191919;
+  border-color: #95a5a6;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  color: #95a5a6;
 }
 .row-fluid textarea,
 .row-fluid input[type="text"],
@@ -2333,6 +2341,7 @@ textarea[class*="span"] {
   padding: 0;
   visibility: hidden;
   width: 100%;
+  
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -2346,7 +2355,7 @@ textarea[class*="span"] {
   display: none;
   opacity: 1;
   visibility: visible;
-  width: auto;
+  width: 7em;
   margin-top: 2px;
 }
 .open > .dropdown-menu {
@@ -2369,8 +2378,9 @@ textarea[class*="span"] {
 .dropdown-menu li.selected > a,
 .dropdown-menu li.active > a.highlighted,
 .dropdown-menu li.selected > a.highlighted {
-  background: #1abc9c;
-  color: #ffffff;
+  background: #fff;
+  color: #bdc3c7;
+  border: 2px solid #95a5a6;
 }
 .dropdown-menu li.active > a:hover,
 .dropdown-menu li.selected > a:hover,
@@ -2380,8 +2390,8 @@ textarea[class*="span"] {
 .dropdown-menu li.selected > a:focus,
 .dropdown-menu li.active > a.highlighted:focus,
 .dropdown-menu li.selected > a.highlighted:focus {
-  background: #16a085;
-  color: #ffffff;
+  background: #f9f9f9;
+  color: #95a5a6;
 }
 .dropdown-menu li > a {
   color: rgba(52, 73, 94, 0.75);
@@ -3603,12 +3613,12 @@ body.vjs-full-window {
   font-weight: 700;
 }
 .login-form {
-  padding: 24px 23px 20px;
+  padding: 17px 11px 3px;
   position: relative;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  width: 300px;
+  width: 100%;
 }
 .login-form:before {
   content: '';
@@ -3625,16 +3635,15 @@ body.vjs-full-window {
   position: relative;
 }
 .login-form .login-field {
-  border-color: transparent;
   font-size: 17px;
   padding-bottom: 11px;
   padding-top: 11px;
   text-indent: 3px;
-  width: 299px;
+  width: 100%;
   margin-bottom: 10px !important;
 }
 .login-form .login-field:focus + .login-field-icon {
-  color: #191919;
+  color: #95a5a6;
 }
 .login-form .login-field-icon {
   color: #bfc9ca;
